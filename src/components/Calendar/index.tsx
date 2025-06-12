@@ -36,7 +36,7 @@ function Calendar({reminders: initialReminders}: Props) {
 
     const getReminders = (parsedReminders: IReminderForToday[]) => {
         const remindersForToday = parsedReminders.filter(
-            (reminder) => reminder.day === today.getDate() && reminder.month === today.getMonth() && reminder.year === today.getFullYear()
+            (reminder) => reminder.day === activeDay.getDate() && reminder.month === activeDay.getMonth() && reminder.year === activeDay.getFullYear()
         );
 
         setRemindersForSelectedDay(remindersForToday);
@@ -64,11 +64,9 @@ function Calendar({reminders: initialReminders}: Props) {
         });
 
         setReminders(parsedReminders);
+        getReminders(parsedReminders);
+    }, [initialReminders, activeDay]);
 
-        getReminders(parsedReminders)
-    }, [initialReminders]);
-
-    // Функция для переключения на следующий месяц
     const nextMonth = () => {
         const nextMonth = new Date(currentDate);
         nextMonth.setMonth(currentDate.getMonth() + 1);
