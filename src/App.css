@@ -1,0 +1,36 @@
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.loader::before {
+  content: "";
+  border: 4px solid var(--white);
+  border-top: 4px solid var(--purple);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin .6s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

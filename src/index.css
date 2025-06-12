@@ -1,0 +1,39 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: auto;
+
+  color-scheme: light dark;
+  color: #242424;
+  background-color: #F7F7F7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --gray: #F7F7F7;
+  --white: #FFFFFF;
+  --gray-dark: #212121;
+  --ligth-gray: #F4F4F4;
+  --light-dark: #7D7D7D;
+  --purple: #5945FE;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif ;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
